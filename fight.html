@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fight - Luta 2D</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="fight-container">
+      <header class="cabecalho">
+        <h1>Combate 2D</h1>
+      </header>
+
+      <div class="fight-hud">
+        <div class="status status-left">
+          <h2 id="fight-name-1">Jogador 1</h2>
+          <div class="health-bar">
+            <div id="health-bar-1" class="health-fill"></div>
+          </div>
+          <p><span id="health-1">100</span> / 100</p>
+          <p>Rounds: <span id="rounds-1">0</span></p>
+        </div>
+
+        <div class="fight-info">
+          <p id="round-counter">Round 1 / 3</p>
+          <p id="timer">00:00</p>
+        </div>
+
+        <div class="status status-right">
+          <h2 id="fight-name-2">Jogador 2</h2>
+          <div class="health-bar">
+            <div id="health-bar-2" class="health-fill"></div>
+          </div>
+          <p><span id="health-2">100</span> / 100</p>
+          <p>Rounds: <span id="rounds-2">0</span></p>
+        </div>
+      </div>
+
+      <section class="arena" id="arena">
+        <div id="player-1" class="fighter fighter-left">
+          <img src="src/images/thor.png" alt="Player 1" />
+          <div class="label">1P</div>
+        </div>
+        <div id="player-2" class="fighter fighter-right">
+          <img src="src/images/ultron.png" alt="Player 2" />
+          <div class="label">2P</div>
+        </div>
+      </section>
+
+      <div class="controls-info">
+        <div>Jogador 1: W (pular), A (esquerda), D (direita), S (atacar)</div>
+        <div>Jogador 2: ↑ (pular), ← (esquerda), → (direita), ↓ (atacar)</div>
+      </div>
+
+      <div class="modal hidden" id="result-modal">
+        <div class="modal-content">
+          <h2>Resultado do Combate</h2>
+          <p id="result-text">Aguardando resultado...</p>
+
+          <div class="stats-panel" id="stats-panel">
+            <div>
+              <strong>Tempo de luta</strong>
+              <span id="stat-time">00:00</span>
+            </div>
+            <div>
+              <strong>Rounds vencidos</strong>
+              <span id="stat-rounds">0 / 3</span>
+            </div>
+            <div>
+              <strong>Dano causado</strong>
+              <span id="stat-damage">0</span>
+            </div>
+            <div>
+              <strong>Número de ataques</strong>
+              <span id="stat-attacks">0</span>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button id="btn-revanche" class="btn">Revanche</button>
+            <button id="btn-menu" class="btn secondary">Voltar ao Menu</button>
+            <button id="btn-stats" class="btn secondary">
+              Ver Estatísticas
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="src/js/fight.js"></script>
+  </body>
+</html>

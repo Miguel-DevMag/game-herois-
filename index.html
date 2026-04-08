@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Personagens - Game Heróis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <h1>Seleção de Personagens</h1>
+        </header>
+
+        <div class="controls">
+            <button id="toggle-categoria" class="btn">Selecionar Vilões</button>
+            <button id="start-game" class="btn disabled" disabled>Começar a Jogar</button>
+        </div>
+
+        <div class="select-screen">
+            <section class="preview">
+                <h2>Jogador 1</h2>
+                <div class="character-card">
+                    <img src="src/images/thor.png" alt="personagem selecionado jogador 1" id="personagem-jogador-1">
+                    <h3 id="nome-jogador-1">Thor</h3>
+                </div>
+            </section>
+
+            <section class="selection-panel">
+                <p id="categoria-label">Categoria: Heróis</p>
+                <ul id="lista-personagens" class="grid-personagens"></ul>
+            </section>
+
+            <section class="preview">
+                <h2>Jogador 2</h2>
+                <div class="character-card">
+                    <img src="src/images/ultron.png" alt="personagem selecionado jogador 2" id="personagem-jogador-2">
+                    <h3 id="nome-jogador-2">Ultron</h3>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="src/js/selection.js"></script>
+</body>
+</html>
